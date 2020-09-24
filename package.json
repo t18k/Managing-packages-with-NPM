@@ -1,8 +1,12 @@
 {
-	"author" : "ThiruKumaran",
+	"author": "ThiruKumaran",
 	"description": "A project that does something awesome",
 	"name": "fcc-learn-npm-package-json",
-	"keywords": [ "freecodecamp", "related", "words" ],
+	"keywords": [
+		"freecodecamp",
+		"related",
+		"words"
+	],
 	"license": "MIT",
 	"version": "1.2.0",
 	"dependencies": {
