@@ -5,6 +5,7 @@ var bGround = require('fcc-express-bground');
 // --> 7)  Mount the Logger middleware here
 
 bGround.log('Hello World');
+console.log('Hello World');
 // --> 11)  Mount the body-parser middleware  here
 
 
