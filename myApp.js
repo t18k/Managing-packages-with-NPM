@@ -4,14 +4,17 @@ var bGround = require('fcc-express-bground');
 require('dotenv').config()
 
 // --> 7)  Mount the Logger middleware here
+app.use((req, res, next) => {
+    console.log(req.method+ ' ' +req.path+ ' - ' +req.ip);
+    next();
+});
 
-bGround.log('Hello World');
-console.log('Hello World');
 // --> 11)  Mount the body-parser middleware  here
 
 
 /** 1) Meet the node console. */
-
+bGround.log('Hello World');
+console.log('Hello World');
 
 /** 2) A first working Express Server */
 
