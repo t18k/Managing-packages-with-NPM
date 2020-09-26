@@ -47,9 +47,17 @@ app.use('/public', express.static(__dirname + '/public'));
 /** 7) Root-level Middleware - A logger */
 //  place it before all the routes !
 
-
 /** 8) Chaining middleware. A Time server */
+function getTimeString() {
+    return new Date().toString();
+}
 
+app.get('/now', (req, res, next) => {
+    req.time = getTimeString();
+    next();
+}, (req, res) => {
+    res.json({time: req.time});
+});
 
 /** 9)  Get input from client - Route parameters */
 
