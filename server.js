@@ -54,12 +54,7 @@ if (!process.env.DISABLE_XORIGIN) {
 //       .send(err.message || 'SERVER ERROR');
 //   }  
 // })
-app.use(express.static(__dirname + '/public'));
-app.use('/public', express.static(__dirname + '/public'));
 
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/views/index.html');
-});
 
 var port = process.env.PORT || 3000;
 bGround.setupBackgroundApp(app, myApp, __dirname).listen(port || 3000, function () {
